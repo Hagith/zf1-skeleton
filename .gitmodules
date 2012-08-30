@@ -1,0 +1,3 @@
+[submodule "vendor/zf1-lib"]
+	path = vendor/zf1-lib
+	url = git@github.com:rafalgalka/zf1-lib.git
