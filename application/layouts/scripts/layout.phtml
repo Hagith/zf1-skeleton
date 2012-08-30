@@ -1,0 +1,131 @@
+<?= $this->doctype() . "\n" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml"
+      lang="pl">
+<head>
+    <?= $this->headMeta()->setSeparator(PHP_EOL . '    ')
+        ->appendHttpEquiv('X-UA-Compatible', 'IE=Edge,chrome=1')
+        ->appendName('description', '')
+        ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+    . "\n" ?>
+
+    <?= $this->headTitle('Project Name')->setSeparator(' - ') . "\n" ?>
+
+    <?= $this->headLink()->setSeparator(PHP_EOL . '    ')
+        ->appendStylesheet('/css/site.min.css')
+    . "\n" ?>
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <?php /* <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png"> */ ?>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write("<script src='/js/libs/jquery/jquery-1.7.1.min.js'>\x3C/script>")</script>
+    <?php
+    $files = array_reverse(array(
+        '/js/libs/swfobject/swfobject.js',
+        '/js/libs/jquery/jquery.ba-postmessage.min.js',
+        '/js/libs/jquery/jquery.scrollTo-1.4.2-min.js',
+        '/js/libs/jquery/jquery.infinitescroll.min.js',
+        '/js/libs/JP/urlEncode.js',
+        '/js/libs/JP/facebook.js',
+//        '/js/libs/bootstrap/bootstrap-modal.js',
+//        '/js/libs/bootstrap/bootstrap-transition.js',
+//        '/js/libs/bootstrap/bootstrap-scrollspy.js',
+        '/js/libs/bootstrap/bootstrap.min.js',
+        '/js/gallery/client.js',
+        '/js/site.js',
+    ));
+    foreach($files as $file) {
+        $this->headScript()->prependFile($file);
+    }
+
+    echo $this->headScript()->setSeparator(PHP_EOL);
+    ?>
+
+    <?= /* Open Graph Protocol */ "\n"?>
+    <?=$this->og()?>
+</head>
+
+<body <?php if ($this->isMain): ?>data-spy="scroll" data-offset="250"<?php endif; ?>>
+    <?=$this->facebook()?>
+
+<div id="wrapper">
+    <div id="bg-top">
+        <div id="bg-bottom">
+            <div id="header">
+                <div id="howto" class="info">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span18">
+                                <p>Jeżeli uważasz, że reklama naszego produktu narusza zasady Kodeksu Etyki Reklamy, <a href="http://www.radareklamy.org/kodeks-etyki-reklamy.htm" target="_blank" rel="external">kliknij</a></p>
+                                <p>Dowiedz się więcej o alkoholu: <a href="http://www.abcalkoholu.pl" target="_blank" rel="external">www.abcalkoholu.pl</a></p>
+                                <p class="pregnancy">W ciąży nie piję alkoholu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="span13">
+                            <a href="/" class="logo">
+                                <img src="/images/logo3.png" alt="Lech" />
+                            </a>
+                        </div>
+                        <div class="span5">
+                            <div class="social">
+                                <a href="http://lech.pl/" class="lech" target="_blank" rel="external">
+                                    <img src="/images/ico/lech.jpg" alt="Lech" />
+                                </a>
+                                <a href="https://www.facebook.com/Lech" class="facebook" target="_blank" rel="external">
+                                    <img src="/images/ico/facebook.png" alt="Facebook" />
+                                </a>
+                                <a href="http://www.youtube.com/lechpremiumtv" class="youtube" target="_blank" rel="external">
+                                    <img src="/images/ico/youtube.png" alt="YouTube" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content">
+                <div class="container">
+                    <?= $this->layout()->content; ?>
+                </div>
+            </div>
+
+            <div id="footer" class="container">
+                <div class="row">
+                    <div class="span18">
+                        <p class="copyright">copyright &copy; <?=date('Y')?> BY KOMPANIA PIWOWARSKA</p>
+                        <p class="created">CREATED BY JOHN PITCHER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="navi-panel">
+    <ul class="nav">
+        <li>
+            <a class="howto" href="/#howto">JAK NAGRYWAĆ?</a>
+        </li>
+        <li>
+            <a class="editor" href="/#editor">NAGRAJ SWÓJ KLIP</a>
+        </li>
+        <li>
+            <a class="gallery" href="/#gallery">ZOBACZ GALERIĘ KLIPÓW</a>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
