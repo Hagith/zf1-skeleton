@@ -1,1 +1,7 @@
 /nbproject/private/
+/application/configs/env.php
+/public/shared/var/*
+/var/log/*
+/var/cache/*
+/var/tmp/*
+!.gitkeep
