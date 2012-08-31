@@ -1,0 +1,49 @@
+<?= $this->doctype() . "\n" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml"
+      lang="pl">
+<head>
+    <?= $this->headMeta()->setSeparator(PHP_EOL . '    ')
+        ->appendHttpEquiv('X-UA-Compatible', 'IE=Edge,chrome=1')
+        ->appendName('description', '')
+        ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+    . "\n" ?>
+
+    <?= $this->headTitle('Project Name')->setSeparator(' - ') . "\n" ?>
+
+    <?= $this->headLink()->setSeparator(PHP_EOL . '    ')
+        ->appendStylesheet('/static/css/site.min.css')
+    . "\n" ?>
+
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <?php /* <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/apple-touch-icon-114x114.png"> */ ?>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write("<script src='/static/js/libs/jquery/jquery-1.7.1.min.js'>\x3C/script>")</script>
+    <?php
+    $files = array_reverse(array(
+    ));
+    foreach($files as $file) {
+        $this->headScript()->prependFile($file);
+    }
+
+    echo $this->headScript()->setSeparator(PHP_EOL);
+    ?>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    <?=$this->layout()->content?>
+</div>
+
+</body>
+</html>

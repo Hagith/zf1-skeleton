@@ -1,0 +1,6 @@
+[submodule "vendor/zf1-lib"]
+	path = vendor/zf1-lib
+	url = git@github.com:rafalgalka/zf1-lib.git
+[submodule "vendor/facebook-php-sdk"]
+	path = vendor/facebook-php-sdk
+	url = https://github.com/facebook/facebook-php-sdk.git
