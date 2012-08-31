@@ -1,4 +1,5 @@
 /nbproject/private/
+/vendor/*
 /application/configs/env.php
 /public/shared/var/*
 /var/log/*

@@ -1,0 +1,23 @@
+{
+    "hash": "792cd7a4e44ea2ac13613279c426af24",
+    "packages": [
+        {
+            "package": "modern/zf1-lib",
+            "version": "dev-incubator",
+            "source-reference": "c63787dbcc69c52de77cff58df00887ee9b6c22f",
+            "commit-date": "1346420879"
+        },
+        {
+            "package": "zendframework/zendframework1",
+            "version": "1.12.0"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "modern/zf1-lib": 20
+    }
+}

@@ -1,5 +1,8 @@
 <?php
 
+if (is_readable('vendor/autoload.php')) {
+    require 'vendor/autoload.php';
+}
 require_once((is_readable('./application/configs/env.php'))
     ? './application/configs/env.php'
     : './application/configs/env.php.dist'
