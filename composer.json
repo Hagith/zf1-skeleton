@@ -1,5 +1,5 @@
 {
     "require": {
-        "modern/zf1-lib": "dev-incubator"
+        "modern/zf1-lib": "dev-latest"
     }
 }

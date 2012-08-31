@@ -1,11 +1,11 @@
 {
-    "hash": "792cd7a4e44ea2ac13613279c426af24",
+    "hash": "2b514452e03a947610c0a0ed81934c8f",
     "packages": [
         {
             "package": "modern/zf1-lib",
-            "version": "dev-incubator",
-            "source-reference": "c63787dbcc69c52de77cff58df00887ee9b6c22f",
-            "commit-date": "1346420879"
+            "version": "dev-latest",
+            "source-reference": "5abd764576073fbad2fcb969498a1ab7b7a82a67",
+            "commit-date": "1346423707"
         },
         {
             "package": "zendframework/zendframework1",
