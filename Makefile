@@ -1,6 +1,6 @@
 SHELL := /bin/bash
-LESS_PATH = public/less/
-CSS_PATH = public/css/
+LESS_PATH = public/static/less/
+CSS_PATH = public/static/css/
 
 LESS_COMPRESSOR ?= `which lessc`
 WATCHR ?= `which watchr`
@@ -32,8 +32,8 @@ css:
 #
 
 js:
-	cat public/js/libs/bootstrap/bootstrap-* > public/js/libs/bootstrap/bootstrap.js
-	uglifyjs -nc public/js/libs/bootstrap/bootstrap.js > public/js/libs/bootstrap/bootstrap.min.js
+	cat public/static/js/libs/bootstrap/bootstrap-* > public/static/js/libs/bootstrap/bootstrap.js
+	uglifyjs -nc public/static/js/libs/bootstrap/bootstrap.js > public/static/js/libs/bootstrap/bootstrap.min.js
 
 watch:
 	@echo "Watching less files..."
