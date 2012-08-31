@@ -1,5 +1,10 @@
 {
     "require": {
         "modern/zf1-lib": "dev-latest"
+    },
+    "autoload": {
+        "psr-0": {
+            "Website": "application/models"
+        }
     }
 }
