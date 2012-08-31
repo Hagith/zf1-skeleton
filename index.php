@@ -1,8 +1,8 @@
 <?php
 
-require_once((is_readable('../application/configs/env.php'))
-    ? '../application/configs/env.php'
-    : '../application/configs/env.php.dist'
+require_once((is_readable('./application/configs/env.php'))
+    ? './application/configs/env.php'
+    : './application/configs/env.php.dist'
 );
 
 /** Modern_Application */
