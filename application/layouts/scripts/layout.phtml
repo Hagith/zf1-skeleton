@@ -13,20 +13,20 @@
     <?= $this->headTitle('Project Name')->setSeparator(' - ') . "\n" ?>
 
     <?= $this->headLink()->setSeparator(PHP_EOL . '    ')
-        ->appendStylesheet('/static/css/site.min.css')
+        ->appendStylesheet('/public/static/css/site.min.css')
     . "\n" ?>
 
-    <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <?php /* <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/apple-touch-icon-114x114.png"> */ ?>
+    <link rel="shortcut icon" href="/public/static/images/favicon.ico">
+    <?php /* <link rel="apple-touch-icon" href="/public/static/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/public/static/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/public/static/images/apple-touch-icon-114x114.png"> */ ?>
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write("<script src='/static/js/libs/jquery/jquery-1.7.1.min.js'>\x3C/script>")</script>
+    <script>window.jQuery || document.write("<script src='/public/static/js/libs/jquery/jquery-1.7.1.min.js'>\x3C/script>")</script>
     <?php
     $files = array_reverse(array(
     ));

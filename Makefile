@@ -5,7 +5,7 @@ CSS_PATH = public/static/css/
 LESS_COMPRESSOR ?= `which lessc`
 WATCHR ?= `which watchr`
 
-LESS_TARGETS=${LESS_PATH}targets/*.less
+LESS_TARGETS=${LESS_PATH}*.less
 
 #
 # BUILD ALL
