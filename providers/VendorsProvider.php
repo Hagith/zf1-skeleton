@@ -31,15 +31,21 @@ class VendorsProvider extends Zend_Tool_Project_Provider_Abstract
     public function update()
     {
         $this->composer('update');
+        $this->bower('update');
     }
 
     public function install()
     {
         $this->composer('install');
+        $this->bower('install --save');
     }
 
     public function composer($cmd = null) {
         system("composer $cmd");
+    }
+
+    public function bower($cmd = null) {
+        system("bower $cmd");
     }
 
 }

@@ -4,9 +4,10 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-=======
->>>>>>> composer update
     "hash": "a8dc55f1ed80cadac4b9b75bc675fec7",
+=======
+    "hash": "e083a8fbb43ce35961950b1f6c4413d4",
+>>>>>>> bower / composer
     "packages": [
         {
             "name": "modern/zf1-lib",
@@ -53,6 +54,33 @@
                 "zend"
             ],
             "time": "2012-09-09 20:50:15"
+        },
+        {
+            "name": "twitter/bootstrap",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/twitter/bootstrap.git",
+                "reference": "v2.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twitter/bootstrap/zipball/v2.3.0",
+                "reference": "v2.3.0",
+                "shasum": ""
+            },
+            "time": "2013-02-08 06:13:13",
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
+            "homepage": "http://twitter.github.com/bootstrap/",
+            "keywords": [
+                "css",
+                "bootstrap"
+            ]
         },
         {
             "name": "zendframework/zendframework1",

@@ -1,6 +1,7 @@
 {
     "require": {
-        "modern/zf1-lib": "dev-latest"
+        "modern/zf1-lib": "dev-latest",
+        "twitter/bootstrap": "2.3.*"
     },
     "autoload": {
         "psr-0": {
