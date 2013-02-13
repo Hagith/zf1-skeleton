@@ -5,10 +5,10 @@ require_once((is_readable('../application/configs/env.php'))
     ? '../application/configs/env.php'
     : '../application/configs/env.php.dist'
 =======
-require_once((is_readable('./app/configs/env.php'))
-    ? './app/configs/env.php'
-    : './app/configs/env.php.dist'
->>>>>>> "application" dir shortened to "app":index.php
+require_once((is_readable('./application/configs/env.php'))
+    ? './application/configs/env.php'
+    : './application/configs/env.php.dist'
+>>>>>>> Revert ""application" dir shortened to "app"":index.php
 );
 
 /** Modern_Application */

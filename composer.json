@@ -4,7 +4,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Website": "app/models"
+            "Website": "application/models"
         }
     }
 }

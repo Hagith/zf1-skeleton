@@ -1,6 +1,6 @@
 /nbproject/private/
 /vendor/*
-/app/configs/env.php
+/application/configs/env.php
 /public/shared/var/*
 /var/log/*
 /var/cache/*
