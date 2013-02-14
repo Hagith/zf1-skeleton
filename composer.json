@@ -1,4 +1,10 @@
 {
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jlong/sass-twitter-bootstrap.git"
+        }
+    ],
     "require": {
         "modern/zf1-lib": "dev-latest",
         "twitter/bootstrap": "2.3.*"

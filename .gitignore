@@ -1,6 +1,9 @@
 /nbproject/private/
 /vendor/*
+.sass-cache
 /application/configs/env.php
+/public/assets/javascripts/*
+/public/assets/stylesheets/*
 /public/shared/var/*
 /var/log/*
 /var/cache/*
