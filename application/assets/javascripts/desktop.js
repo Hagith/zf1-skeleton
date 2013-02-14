@@ -1,1 +1,1 @@
-//= require ../../components/jquery/jquery.js
+//= require ../../../vendor/bower/jquery/jquery.js

@@ -28,9 +28,32 @@
  */
 class AssetsProvider extends Zend_Tool_Project_Provider_Abstract
 {
+    const JAVASCRIPT_SOURCE_DIR = 'application/assets/javascripts';
+    const JAVASCRIPT_TARGET_DIR = 'public/assets/javascripts';
+
     public function compile()
     {
         $this->compass('compile');
+
+        foreach (new DirectoryIterator(self::JAVASCRIPT_SOURCE_DIR) as $fileInfo) {
+            if (!$fileInfo->isFile()) {
+                continue;
+            }
+
+            // uncompressed target
+            $target = self::JAVASCRIPT_TARGET_DIR . '/' . $fileInfo;
+            $this->coyote(
+                $fileInfo->getPathname() . ':'  .
+                $target
+            );
+            // compressed target
+            $target = str_replace('.js', '.min.js', $target);
+            $this->coyote(
+                '-c ' .
+                $fileInfo->getPathname() . ':'  .
+                $target
+            );
+        }
     }
 
     public function watch()
@@ -42,10 +65,9 @@ class AssetsProvider extends Zend_Tool_Project_Provider_Abstract
         system("compass $cmd");
     }
 
-    public function coyote($cmd)
+    public function coyote($cmd = null)
     {
-//        coyote $file:assets/javascripts/${filename}
-//        coyote -c $file:assets/javascripts/${filename%.*}.min.js
+        system("coyote $cmd");
     }
 
 }
