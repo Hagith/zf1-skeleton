@@ -9,3 +9,4 @@
 /var/cache/*
 /var/tmp/*
 !.gitkeep
+node_modules

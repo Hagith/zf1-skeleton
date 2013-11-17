@@ -1,7 +1,0 @@
-{
-  "name": "zf1-skeleton",
-  "version": "1.0.0",
-  "dependencies": {
-    "jquery": "~1.8.3"
-  }
-}

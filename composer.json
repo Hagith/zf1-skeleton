@@ -1,13 +1,8 @@
 {
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/jlong/sass-twitter-bootstrap.git"
-        }
-    ],
+    "repositories": [],
     "require": {
-        "modern/zf1-lib": "dev-latest",
-        "twitter/bootstrap": "2.3.*"
+        "zendframework/zendframework1": "1.12.3",
+        "modern/zf1-lib": "dev-latest"
     },
     "autoload": {
         "psr-0": {

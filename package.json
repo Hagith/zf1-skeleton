@@ -1,0 +1,20 @@
+{
+  "name": "zf1-skeleton",
+  "version": "0.2.0",
+  "description": "Zend Framework 1 Skeleton Application",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:modernweb/zf1-skeleton.git"
+  },
+  "author": "Rafał Gałka <rafal@modernweb.pl",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "matchdep": "~0.1.2",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-compass": "~0.6.0"
+  }
+}
