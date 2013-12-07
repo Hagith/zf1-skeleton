@@ -60,7 +60,7 @@ module.exports = function (grunt) {
                 files: [
                     '<%= path.app %>/views/scripts/**/*.phtml',
                     '<%= path.app %>/layouts/scripts/**/*.phtml',
-                    'public/assets/stylesheets/**/*.css'
+                    'public/assets/css/*.css'
                 ]
             }
         },
