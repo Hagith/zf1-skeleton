@@ -1,15 +1,5 @@
 'use strict';
 
-var mountFolder = function (connect, dir) {
-    return connect.static(require('path').resolve(dir));
-};
-var gateway = require('gateway');
-var phpGateway = function (dir){
-    return gateway(require('path').resolve(dir), {
-        '.php': 'php-cgi'
-    });
-};
-
 module.exports = function (grunt) {
     // load all grunt tasks
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -50,7 +40,7 @@ module.exports = function (grunt) {
         },
         watch: {
             compass: {
-                files: ['<%= path.app %>/assets/**/*.scss'],
+                files: ['<%= path.app %>/assets/sass/**/*.scss'],
                 tasks: ['compass:dev']
             },
             livereload: {
@@ -58,27 +48,11 @@ module.exports = function (grunt) {
                     livereload: true
                 },
                 files: [
-                    '<%= path.app %>/views/scripts/**/*.phtml',
+                    '<%= path.app %>/assets/scripts/**/*.js',
                     '<%= path.app %>/layouts/scripts/**/*.phtml',
+                    '<%= path.app %>/views/scripts/**/*.phtml',
                     'public/assets/css/*.css'
                 ]
-            }
-        },
-        connect: {
-            options: {
-                port: 9000,
-                hostname: '0.0.0.0'
-            },
-            livereload: {
-                options: {
-                    middleware: function (connect) {
-                        return [
-                            require('connect-livereload')(),
-                            phpGateway('public'),
-                            mountFolder(connect, '.')
-                        ];
-                    }
-                }
             }
         }
     });
@@ -91,7 +65,7 @@ module.exports = function (grunt) {
         grunt.task.run([
 //            'clean:server',
 //            'coffee:dist',
-//            'compass:server',
+            'compass:dev',
 //            'livereload-start',
             'connect:livereload',
 //            'open',

@@ -25,6 +25,18 @@
     <link rel="apple-touch-icon" sizes="72x72" href="/public/static/images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/public/static/images/apple-touch-icon-114x114.png"> */ ?>
 
+    <?php
+    $liveReloadSnippet = sprintf(
+        'http://%s:35729/livereload.js?snipver=1',
+        filter_input(INPUT_SERVER, 'HTTP_HOST')
+    );
+    if (ENVIRONMENT === 'development' && false !== @fopen($liveReloadSnippet, 'r')): ?>
+        <script>document.write('<script src="http://'
+            + (location.host || 'localhost').split(':')[0]
+            + ':35729/livereload.js?snipver=1"></'
+            + 'script>')</script>
+    <?php endif; ?>
+
 </head>
 
 <body>
