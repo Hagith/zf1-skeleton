@@ -13,7 +13,7 @@
     <?= $this->headTitle('Project Name')->setSeparator(' - ') . "\n" ?>
 
     <?= $this->headLink()->setSeparator(PHP_EOL . '    ')
-        ->appendStylesheet('/static/css/website.min.css')
+        ->appendStylesheet('/public/assets/css/site.css')
     . "\n" ?>
 
     <!--[if lt IE 9]>
@@ -31,7 +31,9 @@
 
     <?=$this->layout()->content?>
 
-    <script src="/public/assets/javascripts/desktop.min.js"></script>
-
+    <!-- build:js public/assets/scripts/main.js -->
+    <script src="/vendor/jquery/jquery.js"></script>
+    <script src="/application/assets/scripts/main.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

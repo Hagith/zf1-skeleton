@@ -2,7 +2,7 @@
   "name": "zf1-skeleton",
   "version": "0.2.0",
   "dependencies": {
-    "jquery": ">=1.9.0",
+    "jquery": "2.0.x",
     "sass-bootstrap": "3.0.x"
   }
 }
