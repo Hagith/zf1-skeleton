@@ -28,12 +28,14 @@
 </head>
 
 <body>
+    <?= $this->render('includes/header.phtml') ?>
 
-    <?=$this->layout()->content?>
+    <div class="container">
+        <?=$this->layout()->content?>
 
-    <!-- build:js public/assets/scripts/main.js -->
-    <script src="/vendor/jquery/jquery.js"></script>
-    <script src="/application/assets/scripts/main.js"></script>
-    <!-- endbuild -->
+        <?= $this->render('includes/footer.phtml') ?>
+    </div>
+
+    <?= $this->render('includes/scripts.phtml') ?>
 </body>
 </html>
