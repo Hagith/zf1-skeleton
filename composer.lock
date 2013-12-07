@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "a8dc55f1ed80cadac4b9b75bc675fec7",
+    "hash": "76af40afe2984a58f27645c36aaad049",
     "packages": [
         {
             "name": "modern/zf1-lib",
@@ -11,17 +11,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rafalgalka/zf1-lib.git",
-                "reference": "f6eeef59687ab52777f42ab0395b421901c8725d"
+                "reference": "0fbb8fb99c3796e950011ea347807a561b889271"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rafalgalka/zf1-lib/zipball/f6eeef59687ab52777f42ab0395b421901c8725d",
-                "reference": "f6eeef59687ab52777f42ab0395b421901c8725d",
+                "url": "https://api.github.com/repos/rafalgalka/zf1-lib/zipball/0fbb8fb99c3796e950011ea347807a561b889271",
+                "reference": "0fbb8fb99c3796e950011ea347807a561b889271",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.4",
-                "zendframework/zendframework1": ">=1.12.0"
+                "php": ">=5.2.4"
             },
             "type": "library",
             "autoload": {
@@ -49,7 +48,7 @@
                 "Zend Framework",
                 "zend"
             ],
-            "time": "2012-09-09 20:50:15"
+            "time": "2013-05-25 10:31:08"
         },
         {
             "name": "zendframework/zendframework1",
@@ -57,12 +56,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zf1.git",
-                "reference": "release-1.12.3"
+                "reference": "3e31137181d121d03cb1117fd95b07027cfa4bea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zf1/zipball/release-1.12.3",
-                "reference": "release-1.12.3",
+                "url": "https://api.github.com/repos/zendframework/zf1/zipball/3e31137181d121d03cb1117fd95b07027cfa4bea",
+                "reference": "3e31137181d121d03cb1117fd95b07027cfa4bea",
                 "shasum": ""
             },
             "require": {
