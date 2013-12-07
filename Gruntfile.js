@@ -74,7 +74,7 @@ module.exports = function (grunt) {
                     middleware: function (connect) {
                         return [
                             require('connect-livereload')(),
-                            phpGateway('.'),
+                            phpGateway('public'),
                             mountFolder(connect, '.')
                         ];
                     }
