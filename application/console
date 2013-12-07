@@ -46,4 +46,4 @@ $application = new Modern_Application(
 );
 $application->bootstrap();
 
-require 'vendor/zendframework/zendframework1/bin/zf.php';
+require $root . '/vendor/zendframework/zendframework1/bin/zf.php';
