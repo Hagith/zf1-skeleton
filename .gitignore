@@ -1,6 +1,7 @@
 /nbproject/private/
 /vendor/*
 /application/configs/env.php
+/application/assets/images/sprites/*.png
 /public/assets/css/*
 /public/assets/scripts/*
 /public/shared/var/*
@@ -9,3 +10,4 @@
 /var/tmp/*
 !.gitkeep
 node_modules
+dist

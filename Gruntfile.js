@@ -6,12 +6,16 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         path: {
-            app: 'application'
+            app: 'application',
+            public: 'public',
+            dist: 'dist'
         },
         pkg: grunt.file.readJSON('package.json'),
         clean: {
             dist: [
-                '<%= compass.options.cssDir %>/*.css'
+                '<%= compass.options.cssDir %>/*.css',
+                '<%= compass.options.imagesDir %>/sprites/*.png',
+                '<%= path.dist %>/**'
             ]
         },
         compass: {
@@ -54,6 +58,45 @@ module.exports = function (grunt) {
                     'public/assets/css/*.css'
                 ]
             }
+        },
+        copy: {
+            dist: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '.',
+                    dest: '<%= path.dist %>',
+                    src: [
+                        '**',
+                        '.htaccess',
+                        '!**/.*/**', // exclude dot folders
+                        '!.bowerrc',
+                        '!.zfproject.xml',
+                        '!.git*',
+                        '!*.json',
+                        '!*.lock',
+                        '!*.js',
+                        '!*.iml',
+                        '!<%= path.app %>/assets/sass/**',
+                        '!<%= path.app %>/configs/env.php',
+                        '!docs/**',
+                        '!nbproject/**',
+                        '!node_modules/**',
+                        '!<%= path.public %>/shared/var/*',
+                        '!var/cache/*',
+                        '!var/log/*',
+                        '!var/tmp/*',
+                        '!vendor/**/.*', // vendors dot files
+                        '!vendor/**/tests/**',
+                        '!vendor/**/test/**',
+                        '!vendor/**/unitTests/**',
+                        '!vendor/**/examples/**',
+                        '!vendor/**/Examples/**',
+                        '!vendor/**/demos/**',
+                        '!vendor/**/documentation/**'
+                    ]
+                }]
+            }
         }
     });
 
@@ -76,13 +119,17 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'compass:dist',
+        'copy:dist'
 //        'useminPrepare',
 //        'imagemin',
 //        'htmlmin',
 //        'concat',
 //        'cssmin',
 //        'uglify',
-//        'copy',
 //        'usemin'
+    ]);
+
+    grunt.registerTask('default', [
+        'build'
     ]);
 };
