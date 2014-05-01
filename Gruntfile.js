@@ -7,27 +7,20 @@ module.exports = function (grunt) {
     grunt.initConfig({
         path: {
             app: 'application',
-            public: 'public',
+            assets: 'public',
             dist: 'dist'
         },
         pkg: grunt.file.readJSON('package.json'),
-        clean: {
-            dist: [
-                '<%= compass.options.cssDir %>/*.css',
-                '<%= compass.options.imagesDir %>/sprites/*.png',
-                '<%= path.dist %>/**'
-            ]
-        },
         compass: {
             options: {
-                sassDir: '<%= path.app %>/assets/sass',
-                imagesDir: '<%= path.app %>/assets/images',
-                javascriptsDir: '<%= path.app %>/assets/js',
-                fontsDir: '<%= path.app %>/assets/fonts',
-                cssDir: 'public/assets/css',
-                cacheDir: 'var/tmp/.sass',
+                sassDir: '<%= path.assets %>/sass',
+                imagesDir: '<%= path.assets %>/images',
+                javascriptsDir: '<%= path.assets %>/scripts',
+                fontsDir: '<%= path.assets %>/fonts',
+                cssDir: '<%= path.assets %>/css',
+                cacheDir: 'var/cache/.sass',
                 importPath: [
-                    'vendor/'
+                    'vendor/bootstrap-sass/vendor/assets/stylesheets'
                 ]
             },
             dist: {
@@ -44,7 +37,7 @@ module.exports = function (grunt) {
         },
         watch: {
             compass: {
-                files: ['<%= path.app %>/assets/sass/**/*.scss'],
+                files: ['<%= path.assets %>/sass/**/*.scss'],
                 tasks: ['compass:dev']
             },
             livereload: {
@@ -52,12 +45,19 @@ module.exports = function (grunt) {
                     livereload: true
                 },
                 files: [
-                    '<%= path.app %>/assets/scripts/**/*.js',
-                    '<%= path.app %>/layouts/scripts/**/*.phtml',
-                    '<%= path.app %>/views/scripts/**/*.phtml',
-                    'public/assets/css/*.css'
+                    '<%= path.assets %>/css/*.css',
+                    '<%= path.assets %>/scripts/**/*.js',
+                    'application/layouts/scripts/**/*.phtml',
+                    'application/views/scripts/**/*.phtml'
                 ]
             }
+        },
+        clean: {
+            dist: [
+                '<%= compass.options.cssDir %>/*.css',
+                '<%= compass.options.imagesDir %>/sprites/*.png',
+                '<%= path.dist %>/**'
+            ]
         },
         copy: {
             dist: {
@@ -77,16 +77,16 @@ module.exports = function (grunt) {
                         '!*.lock',
                         '!*.js',
                         '!*.iml',
-                        '!<%= path.app %>/assets/sass/**',
-                        '!<%= path.app %>/configs/env.php',
+                        '!<%= path.assets %>/sass/**',
+                        '!application/configs/env.php',
                         '!docs/**',
                         '!nbproject/**',
                         '!node_modules/**',
-                        '!<%= path.public %>/shared/var/*',
+                        '!<%= path.assets %>/shared/var/*',
                         '!var/cache/*',
                         '!var/log/*',
                         '!var/tmp/*',
-                        '!vendor/**/.*', // vendors dot files
+//                        '!vendor/**/.*', // vendors dot files
                         '!vendor/**/tests/**',
                         '!vendor/**/test/**',
                         '!vendor/**/unitTests/**',
@@ -97,39 +97,33 @@ module.exports = function (grunt) {
                     ]
                 }]
             }
+        },
+        useminPrepare: {
+            html: 'application/**/*.phtml',
+            options: {
+                root: '<%= path.dist %>',
+                staging: 'var/tmp'
+            }
+        },
+        usemin: {
+            html: ['<%= path.dist %>/application/**/*.phtml']
         }
-    });
-
-    grunt.registerTask('server', function (target) {
-//        if (target === 'dist') {
-//            return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
-//        }
-
-        grunt.task.run([
-//            'clean:server',
-//            'coffee:dist',
-            'compass:dev',
-//            'livereload-start',
-            'connect:livereload',
-//            'open',
-            'watch'
-        ]);
     });
 
     grunt.registerTask('build', [
         'clean:dist',
         'compass:dist',
-        'copy:dist'
-//        'useminPrepare',
+        'copy:dist',
+        'useminPrepare',
+        'concat',
+        'uglify',
+        'usemin'
 //        'imagemin',
 //        'htmlmin',
-//        'concat',
-//        'cssmin',
-//        'uglify',
-//        'usemin'
     ]);
 
     grunt.registerTask('default', [
         'build'
     ]);
+
 };

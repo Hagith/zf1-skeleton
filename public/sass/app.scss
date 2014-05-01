@@ -3,5 +3,6 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/desktop.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "site/config";
-@import "site/layout";
+@import "config";
+
+@import "app/layout";

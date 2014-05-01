@@ -1,8 +1,8 @@
 <?= $this->doctype() . "\n" ?>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml" <?php /*
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml"
-      lang="pl">
+      */?> lang="pl">
 <head>
     <?= $this->headMeta()->setSeparator(PHP_EOL . '    ')
         ->appendHttpEquiv('X-UA-Compatible', 'IE=Edge,chrome=1')
@@ -13,7 +13,7 @@
     <?= $this->headTitle('Project Name')->setSeparator(' - ') . "\n" ?>
 
     <?= $this->headLink()->setSeparator(PHP_EOL . '    ')
-        ->appendStylesheet('/public/assets/css/site.css')
+        ->appendStylesheet('/public/css/app.css')
     . "\n" ?>
 
     <!--[if lt IE 9]>
@@ -24,18 +24,6 @@
     <?php /* <link rel="apple-touch-icon" href="/public/static/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/public/static/images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/public/static/images/apple-touch-icon-114x114.png"> */ ?>
-
-    <?php
-    $liveReloadSnippet = sprintf(
-        'http://%s:35729/livereload.js?snipver=1',
-        filter_input(INPUT_SERVER, 'HTTP_HOST')
-    );
-    if (ENVIRONMENT === 'development' && false !== @fopen($liveReloadSnippet, 'r')): ?>
-        <script>document.write('<script src="http://'
-            + (location.host || 'localhost').split(':')[0]
-            + ':35729/livereload.js?snipver=1"></'
-            + 'script>')</script>
-    <?php endif; ?>
 
 </head>
 

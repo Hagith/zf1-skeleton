@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rafalgalka/zf1-lib.git",
-                "reference": "0fbb8fb99c3796e950011ea347807a561b889271"
+                "reference": "8e77ab04a1d67de0ee0f15fedefc90c4564e9423"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rafalgalka/zf1-lib/zipball/0fbb8fb99c3796e950011ea347807a561b889271",
-                "reference": "0fbb8fb99c3796e950011ea347807a561b889271",
+                "url": "https://api.github.com/repos/rafalgalka/zf1-lib/zipball/8e77ab04a1d67de0ee0f15fedefc90c4564e9423",
+                "reference": "8e77ab04a1d67de0ee0f15fedefc90c4564e9423",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
                 "Zend Framework",
                 "zend"
             ],
-            "time": "2013-05-25 10:31:08"
+            "time": "2014-04-28 19:07:42"
         },
         {
             "name": "zendframework/zendframework1",
