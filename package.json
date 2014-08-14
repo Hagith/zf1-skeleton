@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:modernweb/zf1-skeleton.git"
+    "url": "git@github.com:rafalgalka/zf1-skeleton.git"
   },
   "author": "Rafał Gałka <rafal.galka@modernweb.pl>",
   "license": "BSD-2-Clause",
