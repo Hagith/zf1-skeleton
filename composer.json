@@ -2,7 +2,9 @@
     "repositories": [],
     "require": {
         "zendframework/zendframework1": "1.12.3",
-        "modern/zf1-lib": "dev-latest"
+        "modern/zf1-lib": "dev-latest",
+        "symfony/console": "^2.7",
+        "symfony/finder": "^2.7"
     },
     "autoload": {
         "psr-0": {

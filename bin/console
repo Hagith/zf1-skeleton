@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+$root = realpath(dirname(__FILE__) . '/..');
+require_once((is_readable($root . '/application/configs/env.php'))
+    ? $root . '/application/configs/env.php'
+    : $root . '/application/configs/env.php.dist'
+);
+
+// Create application, bootstrap, and run
+$application = new Modern_Application(
+    ENVIRONMENT,
+    APPLICATION_PATH . '/configs/application.ini'
+);
+$application->bootstrap();
+
+$console = new Website\Console();
+$console->addAutoloadNamespace('Website\\Console\\Command',
+    ROOT_PATH . '/application/models/Website/Console/Command');
+$console->run();
