@@ -1,8 +1,0 @@
-{
-  "name": "zf1-skeleton",
-  "version": "0.2.0",
-  "dependencies": {
-    "bootstrap-sass": "twbs/bootstrap-sass#~3.1.1",
-    "jquery": "1.11.x"
-  }
-}

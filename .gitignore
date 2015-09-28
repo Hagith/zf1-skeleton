@@ -1,11 +1,11 @@
-vendor/*
+.idea/workspace.xml
+vendor
+node_modules
 application/configs/env.php
-public/images/sprites/*.png
-public/css/*.css
-public/shared/var/*
+assets/build
+assets/styles/config/_sprites.scss
+var/assets/*
 var/log/*
 var/cache/*
 var/tmp/*
 !.gitkeep
-node_modules
-dist
