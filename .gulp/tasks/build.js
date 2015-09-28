@@ -3,6 +3,7 @@ var sequence = require('gulp-sequence');
 
 gulp.task('build', sequence(
     'clean',
-    'sprites',
-    ['minify-css', 'uglify-js']
+    ['sprites', 'fonts'],
+    ['minify-css', 'uglify-js'],
+    'version'
 ));
