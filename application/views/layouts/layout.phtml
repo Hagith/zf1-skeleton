@@ -13,18 +13,10 @@
     <?= $this->headTitle('Project Name')->setSeparator(' - ') . "\n" ?>
 
     <?= $this->headLink()->setSeparator(PHP_EOL . '    ')
-        ->appendStylesheet('/public/css/app.css')
+        ->appendStylesheet('/assets/build/styles/app.css')
     . "\n" ?>
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="shortcut icon" href="/favicon.ico">
-    <?php /* <link rel="apple-touch-icon" href="/public/static/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/public/static/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/public/static/images/apple-touch-icon-114x114.png"> */ ?>
-
+    <link rel="shortcut icon" href="/assets/favicon.ico">
 </head>
 
 <body>
@@ -36,6 +28,6 @@
         <?= $this->render('includes/footer.phtml') ?>
     </div>
 
-    <?= $this->render('includes/scripts.phtml') ?>
+    <script src="/assets/build/scripts/app.js"></script>
 </body>
 </html>
